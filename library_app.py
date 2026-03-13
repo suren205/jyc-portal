@@ -6,14 +6,14 @@ import pandas as pd
 st.set_page_config(page_title="JYC Digital Portal", layout="wide", page_icon="📚")
 
 # --- Google Sheets URLs (आफ्नो वास्तविक लिंक यहाँ हाल्नुहोस्) ---
-LIBRARY_SHEET_URL = "http://localhost:8501/#jansewa-youth-club-jyc-digital-library"
+LIBRARY_SHEET_URL = "https://docs.google.com/spreadsheets/d/1bSnwkrm6MQ1nq31FC4NVAkdDAVSQHKMrVa42Wg8ryXs/edit?usp=sharing"
 WARD_SHEET_URL = "तपाईंको_Development_Sheet_को_लिंक"
 
 # कनेक्सन सेटअप
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # --- साइडबार मेनु ---
-st.sidebar.image("https://via.placeholder.com/150?text=JYC+Logo") # क्लबको लोगो भए यहाँ राख्नुहोला
+st.sidebar.image("307286262_1066058600717181_5062110872657776485_n.jpg") # क्लबको लोगो भए यहाँ राख्नुहोला
 st.sidebar.title("डिजिटल मिर्चैया-८")
 menu = ["🏠 गृहपृष्ठ", "📖 डिजिटल पुस्तकालय", "📊 वडा विकास ड्यासबोर्ड", "ℹ️ हाम्रो बारेमा"]
 choice = st.sidebar.selectbox("मेनु छान्नुहोस्", menu)
@@ -22,7 +22,7 @@ choice = st.sidebar.selectbox("मेनु छान्नुहोस्", men
 if choice == "🏠 गृहपृष्ठ":
     st.title("📚 जनसेवा युथ क्लब (JYC) डिजिटल पोर्टल")
     st.subheader("मिर्चैया नगरपालिका-८, सिराहा | स्थापना: २०७९ BS")
-    st.image("https://via.placeholder.com/1000x400.png?text=Building+a+Smarter+Mirchaiya")
+    st.image("307286262_1066058600717181_5062110872657776485_n.jpg")
     
     st.write("### मुख्य सुविधाहरू:")
     col1, col2 = st.columns(2)
@@ -93,4 +93,5 @@ elif choice == "ℹ️ हाम्रो बारेमा":
     * **उद्देश्य:** मिर्चैया-८ को विकास र युवाहरूलाई प्रविधिसँग जोड्ने।
     
     हामी आगामी २०८४ को स्थानीय निर्वाचनमा वडा नं. ८ लाई 'डिजिटल र पारदर्शी वडा' बनाउने लक्ष्यका साथ अगाडि बढिरहेका छौं।
+
     """)
